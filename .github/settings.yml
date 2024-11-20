@@ -126,15 +126,15 @@ branches:
       enforce_admins: null
       required_linear_history: false
       restrictions: null
-  # - name: E2E
-  #   protection:
-  #     required_pull_request_reviews:
-  #       required_approving_review_count: 0
-  #       dismiss_stale_reviews: true
-  #     required_status_checks: null
-  #     enforce_admins: null
-  #     required_linear_history: true
-  #     restrictions: null
+  - name: E2E
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 0
+        dismiss_stale_reviews: true
+      required_status_checks: null
+      enforce_admins: null
+      required_linear_history: true
+      restrictions: null
 
 # rulesets:
 #   - name: main
