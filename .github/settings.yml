@@ -136,59 +136,59 @@ branches:
       required_linear_history: true
       restrictions: null
 
-rulesets:
-  - name: main
-    target: branch
-    enforcement: active
-    conditions:
-      ref_name:
-        include:
-          - "refs/heads/main"
-        exclude: []
-    rules:
-      - type: pull_request
-        parameters:
-          dismiss_stale_reviews_on_push: true
-          require_code_owner_review: false
-          require_last_push_approval: true
-          reviewers: 1
-          required_review_thread_resolution: false
-      - type: non_fast_forward
-      - type: deletion
-  - name: UAT
-    target: branch
-    enforcement: active
-    conditions:
-      ref_name:
-        include:
-          - "refs/heads/UAT"
-        exclude: []
-    rules:
-      - type: pull_request
-        parameters:
-          dismiss_stale_reviews_on_push: true
-          require_code_owner_review: false
-          require_last_push_approval: true
-          reviewers: 0
-          required_review_thread_resolution: false
-      - type: non_fast_forward
-      - type: deletion
-  - name: E2E
-    target: branch
-    enforcement: active
-    conditions:
-      ref_name:
-        include:
-          - "refs/heads/E2E"
-        exclude: []
-    rules:
-      - type: pull_request
-        parameters:
-          dismiss_stale_reviews_on_push: true
-          require_code_owner_review: false
-          require_last_push_approval: true
-          reviewers: 0
-          required_review_thread_resolution: false
-      - type: non_fast_forward
-      - type: deletion
-      - type: required_linear_history
+# rulesets:
+#   - name: main
+#     target: branch
+#     enforcement: active
+#     conditions:
+#       ref_name:
+#         include:
+#           - "refs/heads/main"
+#         exclude: []
+#     rules:
+#       - type: pull_request
+#         parameters:
+#           dismiss_stale_reviews_on_push: true
+#           require_code_owner_review: false
+#           require_last_push_approval: true
+#           reviewers: 1
+#           required_review_thread_resolution: false
+#       - type: non_fast_forward
+#       - type: deletion
+#   - name: UAT
+#     target: branch
+#     enforcement: active
+#     conditions:
+#       ref_name:
+#         include:
+#           - "refs/heads/UAT"
+#         exclude: []
+#     rules:
+#       - type: pull_request
+#         parameters:
+#           dismiss_stale_reviews_on_push: true
+#           require_code_owner_review: false
+#           require_last_push_approval: true
+#           reviewers: 0
+#           required_review_thread_resolution: false
+#       - type: non_fast_forward
+#       - type: deletion
+#   - name: E2E
+#     target: branch
+#     enforcement: active
+#     conditions:
+#       ref_name:
+#         include:
+#           - "refs/heads/E2E"
+#         exclude: []
+#     rules:
+#       - type: pull_request
+#         parameters:
+#           dismiss_stale_reviews_on_push: true
+#           require_code_owner_review: false
+#           require_last_push_approval: true
+#           reviewers: 0
+#           required_review_thread_resolution: false
+#       - type: non_fast_forward
+#       - type: deletion
+#       - type: required_linear_history
