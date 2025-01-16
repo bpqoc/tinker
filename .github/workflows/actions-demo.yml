@@ -17,3 +17,4 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "The job's status is ${{ job.status }}"
       - run: echo "The associated group is ${{ vars.GROUP }}"
+      - run: echo "An unset var ${{ vars.NONE }}"
